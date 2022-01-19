@@ -5,8 +5,12 @@ class Propietario{
         this._telefono = telefono;
     }
     datosPropietario(){
-        return `El nombre del propietario es : ${this.nombre}. el domicilio es : ${this.direccion}, y el número telefónico de contacto es: ${this.telefono}.`
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML =  `<ul> <li> <span>El nombre del dueño es: ${this.nombre} . El domicio es: ${this.direccion}, y el número telefonico de contacto: ${this.telefono}</span> </li> <li ><span>El tipo de animal es: ${this.tipo}, mientras que el nombre de la mascota es:${this.nombreMascota} y la enfermedad es: ${this.enfermedad}</span></li></ul>`
     }
+
+    //getters que no use 
+
     // get nombre(){
     //     return this._nombre;
     // }
@@ -79,10 +83,9 @@ let reciboDatos = (event)=>{
     const mascotaData = registro();
     console.log(mascotaData);
 // Imprimir en pantalla (no funciona!!!!!!!)
-    const resultado = document.getElementById('resultado');
-    const p = document.createElement('p');
-    p.innerHTML = `<ul>Nombre: ${this.nombre} telefono: ${this.telefono} dirección: ${this.direccion};<br></ul>`;
-    resultado.appendChild('p');
+    // let resultado = document.getElementById('resultado');
+    // resultado.innerHTML =  `<ul> <li> <span>El nombre del dueño es:</span></li></ul>`
+    
 
     // const nombre = mascotaData.getNombre;
     // const telefono = mascotaData.getTelefono;
